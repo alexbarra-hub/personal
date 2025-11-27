@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { Linkedin, FileText, Code2, PenLine, Menu, X } from 'lucide-react';
+import { Linkedin, FileText, Code2, PenLine, Menu, X, Settings } from 'lucide-react';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
+import BlogAdmin from './components/BlogAdmin';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'thoughts'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'thoughts' | 'admin'>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigateTo = (page: 'home' | 'projects' | 'thoughts') => {
+  const navigateTo = (page: 'home' | 'projects' | 'thoughts' | 'admin') => {
     setCurrentPage(page);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -45,6 +46,15 @@ function App() {
                 }`}
               >
                 Thoughts
+              </button>
+              <button
+                onClick={() => navigateTo('admin')}
+                className={`transition-colors font-medium flex items-center gap-2 ${
+                  currentPage === 'admin' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <Settings className="w-4 h-4" />
+                <span>Admin</span>
               </button>
             </div>
 
@@ -87,6 +97,15 @@ function App() {
               >
                 Thoughts
               </button>
+              <button
+                onClick={() => navigateTo('admin')}
+                className={`text-left transition-colors font-medium py-2 flex items-center gap-2 ${
+                  currentPage === 'admin' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <Settings className="w-4 h-4" />
+                <span>Admin</span>
+              </button>
             </div>
           )}
         </div>
@@ -97,6 +116,7 @@ function App() {
         {currentPage === 'home' && <Hero />}
         {currentPage === 'projects' && <Projects />}
         {currentPage === 'thoughts' && <Blog />}
+        {currentPage === 'admin' && <BlogAdmin />}
       </main>
 
       {/* Footer */}
