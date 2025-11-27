@@ -41,7 +41,7 @@ export default function Hero() {
               <div className="pt-4 flex flex-col items-center md:items-start gap-4">
                 <div className="flex items-center gap-4">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/alexbarra"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-5 py-2.5 text-slate-700 hover:text-blue-600 border border-slate-300 rounded-lg hover:border-blue-600 transition-all"
