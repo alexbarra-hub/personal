@@ -1,18 +1,24 @@
-import { useState } from 'react';
-import { Linkedin, FileText, Code2, PenLine, Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Linkedin, FileText, Code2, PenLine, Menu, X, BarChart3 } from 'lucide-react';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
+import Analytics from './components/Analytics';
+import { trackPageView } from './lib/analytics';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'thoughts'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'thoughts' | 'analytics'>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigateTo = (page: 'home' | 'projects' | 'thoughts') => {
+  const navigateTo = (page: 'home' | 'projects' | 'thoughts' | 'analytics') => {
     setCurrentPage(page);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    trackPageView(currentPage);
+  }, [currentPage]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
@@ -45,6 +51,15 @@ function App() {
                 }`}
               >
                 Thoughts
+              </button>
+              <button
+                onClick={() => navigateTo('analytics')}
+                className={`transition-colors font-medium flex items-center gap-2 ${
+                  currentPage === 'analytics' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <BarChart3 className="w-4 h-4" />
+                <span>Analytics</span>
               </button>
             </div>
 
@@ -87,6 +102,15 @@ function App() {
               >
                 Thoughts
               </button>
+              <button
+                onClick={() => navigateTo('analytics')}
+                className={`text-left transition-colors font-medium py-2 flex items-center gap-2 ${
+                  currentPage === 'analytics' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <BarChart3 className="w-4 h-4" />
+                <span>Analytics</span>
+              </button>
             </div>
           )}
         </div>
@@ -97,6 +121,7 @@ function App() {
         {currentPage === 'home' && <Hero />}
         {currentPage === 'projects' && <Projects />}
         {currentPage === 'thoughts' && <Blog />}
+        {currentPage === 'analytics' && <Analytics />}
       </main>
 
       {/* Footer */}

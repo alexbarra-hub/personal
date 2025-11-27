@@ -1,4 +1,5 @@
 import { Linkedin, FileText, ChevronDown } from 'lucide-react';
+import { trackClick } from '../lib/analytics';
 
 export default function Hero() {
 
@@ -44,6 +45,7 @@ export default function Hero() {
                     href="https://www.linkedin.com/in/alexbarra"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackClick('home', 'linkedin_button')}
                     className="flex items-center gap-2 px-5 py-2.5 text-slate-700 hover:text-blue-600 border border-slate-300 rounded-lg hover:border-blue-600 transition-all"
                   >
                     <Linkedin className="w-5 h-5" />
