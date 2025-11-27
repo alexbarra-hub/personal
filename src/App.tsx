@@ -4,11 +4,15 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Analytics from './components/Analytics';
+import AdminLogin from './components/AdminLogin';
 import { trackPageView } from './lib/analytics';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'thoughts' | 'analytics'>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(() => {
+    return sessionStorage.getItem('admin_authenticated') === 'true';
+  });
 
   const navigateTo = (page: 'home' | 'projects' | 'thoughts' | 'analytics') => {
     setCurrentPage(page);
@@ -52,15 +56,6 @@ function App() {
               >
                 Thoughts
               </button>
-              <button
-                onClick={() => navigateTo('analytics')}
-                className={`transition-colors font-medium flex items-center gap-2 ${
-                  currentPage === 'analytics' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                <BarChart3 className="w-4 h-4" />
-                <span>Analytics</span>
-              </button>
             </div>
 
             <div className="md:hidden">
@@ -102,15 +97,6 @@ function App() {
               >
                 Thoughts
               </button>
-              <button
-                onClick={() => navigateTo('analytics')}
-                className={`text-left transition-colors font-medium py-2 flex items-center gap-2 ${
-                  currentPage === 'analytics' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                <BarChart3 className="w-4 h-4" />
-                <span>Analytics</span>
-              </button>
             </div>
           )}
         </div>
@@ -121,7 +107,13 @@ function App() {
         {currentPage === 'home' && <Hero />}
         {currentPage === 'projects' && <Projects />}
         {currentPage === 'thoughts' && <Blog />}
-        {currentPage === 'analytics' && <Analytics />}
+        {currentPage === 'analytics' && (
+          isAdminAuthenticated ? (
+            <Analytics />
+          ) : (
+            <AdminLogin onLogin={() => setIsAdminAuthenticated(true)} />
+          )
+        )}
       </main>
 
       {/* Footer */}

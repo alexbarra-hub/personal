@@ -1,4 +1,5 @@
 import { supabase } from './supabase';
+import { supabaseAdmin } from './supabase-admin';
 
 let sessionId: string | null = null;
 
@@ -44,17 +45,17 @@ export async function trackClick(page: string, element: string, additionalData?:
 }
 
 export async function getAnalyticsSummary() {
-  const { data: totalViews } = await supabase
+  const { data: totalViews } = await supabaseAdmin
     .from('analytics_events')
     .select('*', { count: 'exact', head: true })
     .eq('event_type', 'page_view');
 
-  const { data: totalClicks } = await supabase
+  const { data: totalClicks } = await supabaseAdmin
     .from('analytics_events')
     .select('*', { count: 'exact', head: true })
     .eq('event_type', 'click');
 
-  const { data: uniqueSessions } = await supabase
+  const { data: uniqueSessions } = await supabaseAdmin
     .from('analytics_events')
     .select('session_id')
     .eq('event_type', 'page_view');
@@ -63,7 +64,7 @@ export async function getAnalyticsSummary() {
     ? new Set(uniqueSessions.map(s => s.session_id)).size
     : 0;
 
-  const { data: pageViews } = await supabase
+  const { data: pageViews } = await supabaseAdmin
     .from('analytics_events')
     .select('page')
     .eq('event_type', 'page_view');
@@ -73,7 +74,7 @@ export async function getAnalyticsSummary() {
     pageViewCounts[pv.page] = (pageViewCounts[pv.page] || 0) + 1;
   });
 
-  const { data: recentEvents } = await supabase
+  const { data: recentEvents } = await supabaseAdmin
     .from('analytics_events')
     .select('*')
     .order('timestamp', { ascending: false })
