@@ -23,6 +23,13 @@ const projects: Project[] = [
       { url: 'https://offalgo.com', label: 'Website' },
     ],
   },
+  {
+    id: 2,
+    title: 'Start Living',
+    description: 'An interactive tool designed to help people take action and start living their best lives. Practical steps and inspiration for meaningful change.',
+    tags: ['Web App', 'React', 'Personal Development'],
+    liveUrl: 'https://startlivingnow.bolt.host/',
+  },
 ];
 
 export default function Projects() {
