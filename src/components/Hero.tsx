@@ -1,4 +1,4 @@
-import { Linkedin, FileText, ChevronDown } from 'lucide-react';
+import { Linkedin, FileText, ChevronDown, Briefcase } from 'lucide-react';
 import { trackClick } from '../lib/analytics';
 
 export default function Hero() {
@@ -44,6 +44,16 @@ export default function Hero() {
                   >
                     <Linkedin className="w-5 h-5" />
                     LinkedIn
+                  </a>
+                  <a
+                    href="https://nebula-lightning-ff3.notion.site/Barra-Ventures-278d423e383080599faae0e32b84dae8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackClick('home', 'barra_ventures_button')}
+                    className="flex items-center gap-2 px-5 py-2.5 text-slate-700 hover:text-slate-900 border border-slate-300 rounded-lg hover:border-slate-900 transition-all"
+                  >
+                    <Briefcase className="w-5 h-5" />
+                    Barra Ventures
                   </a>
                 </div>
               </div>
