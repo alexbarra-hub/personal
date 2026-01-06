@@ -17,26 +17,17 @@ export default function Hero() {
 
           <div className="flex-1 text-center md:text-left">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-4 leading-tight">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-600">Alex</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+                I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-600">Alex</span>. I help teams and businesses grow through thoughtful systems and design.
               </h1>
-              <p className="text-xl md:text-2xl text-slate-600 font-medium">
-                I help teams and businesses grow
-              </p>
             </div>
 
             <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
               <p>
-                My experience spans <strong>sales, marketing, customer success, operations, HR, and management consulting</strong>,
-                supporting organizations from pre-seed startups to Fortune 50 companies.
+                My background spans sales, marketing, customer success, operations, HR, and consulting—from startups to Fortune 50 companies. Currently an MBA candidate at Berkeley Haas School of Business.
               </p>
               <p>
-                I've led org designs, operating model improvements, and large-scale transformations across tech, product,
-                and go-to-market teams.
-              </p>
-              <p>
-                I'm currently an <strong>MBA candidate at Berkeley Haas</strong>, focused on growth, strategy,
-                and building high-performing organizations.
+                Creator of <strong>OFF ALGO</strong>, where I explore attention, behavior, and curiosity beyond algorithms.
               </p>
 
               <div className="pt-4 flex flex-col items-center md:items-start gap-4">
