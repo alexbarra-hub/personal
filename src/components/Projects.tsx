@@ -26,7 +26,7 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <div className="min-h-screen pt-0 pb-20 px-6 bg-white">
