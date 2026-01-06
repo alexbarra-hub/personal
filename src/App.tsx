@@ -102,7 +102,7 @@ function App() {
       <footer className="bg-slate-900 text-slate-300 py-6">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center text-slate-500 text-sm">
-            © 2025. All rights reserved.
+            © 2026 Alex Barra. All rights reserved.
           </div>
         </div>
       </footer>
