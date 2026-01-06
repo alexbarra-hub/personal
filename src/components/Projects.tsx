@@ -8,14 +8,20 @@ interface Project {
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
+  additionalLinks?: { url: string; label: string }[];
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Coming Soon',
-    description: 'Exciting projects in the works. Check back soon to see what I\'ve been building!',
-    tags: ['JavaScript', 'React', 'TypeScript'],
+    title: 'OFF ALGO',
+    description: 'A newsletter and content platform exploring ideas beyond the algorithm. Breaking free from digital echo chambers with thoughtful perspectives and authentic conversations.',
+    tags: ['Newsletter', 'Content', 'Writing'],
+    additionalLinks: [
+      { url: 'https://offa1go.substack.com', label: 'Substack' },
+      { url: 'https://offalgo.beehiiv.com', label: 'Beehiiv' },
+      { url: 'https://offalgo.com', label: 'Website' },
+    ],
   },
 ];
 
@@ -74,7 +80,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
@@ -97,6 +103,18 @@ export default function Projects() {
                     Code
                   </a>
                 )}
+                {project.additionalLinks?.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-slate-900 hover:text-slate-600 font-medium transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    {link.label}
+                  </a>
+                ))}
               </div>
             </div>
           ))}

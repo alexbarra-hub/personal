@@ -2,19 +2,18 @@ import { useState, useEffect } from 'react';
 import { Linkedin, FileText, Code2, PenLine, Menu, X, BarChart3 } from 'lucide-react';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import Blog from './components/Blog';
 import Analytics from './components/Analytics';
 import AdminLogin from './components/AdminLogin';
 import { trackPageView } from './lib/analytics';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'thoughts' | 'analytics'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'analytics'>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(() => {
     return sessionStorage.getItem('admin_authenticated') === 'true';
   });
 
-  const navigateTo = (page: 'home' | 'projects' | 'thoughts' | 'analytics') => {
+  const navigateTo = (page: 'home' | 'projects' | 'analytics') => {
     setCurrentPage(page);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -47,14 +46,6 @@ function App() {
                 }`}
               >
                 Projects
-              </button>
-              <button
-                onClick={() => navigateTo('thoughts')}
-                className={`transition-colors font-medium ${
-                  currentPage === 'thoughts' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Thoughts
               </button>
             </div>
 
@@ -89,14 +80,6 @@ function App() {
               >
                 Projects
               </button>
-              <button
-                onClick={() => navigateTo('thoughts')}
-                className={`text-left transition-colors font-medium py-2 ${
-                  currentPage === 'thoughts' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                Thoughts
-              </button>
             </div>
           )}
         </div>
@@ -106,7 +89,6 @@ function App() {
       <main>
         {currentPage === 'home' && <Hero />}
         {currentPage === 'projects' && <Projects />}
-        {currentPage === 'thoughts' && <Blog />}
         {currentPage === 'analytics' && (
           isAdminAuthenticated ? (
             <Analytics />
