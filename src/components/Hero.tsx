@@ -17,9 +17,12 @@ export default function Hero() {
 
           <div className="flex-1 text-center md:text-left">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-600">Alex</span>. I help teams and businesses grow through thoughtful systems and design.
+              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-4 leading-tight">
+                I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-600">Alex</span>.
               </h1>
+              <p className="text-xl md:text-2xl text-slate-600 font-medium">
+                I help teams and businesses grow through thoughtful systems and design.
+              </p>
             </div>
 
             <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
