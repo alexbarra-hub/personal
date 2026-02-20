@@ -1,4 +1,4 @@
-import { Linkedin, FileText, ChevronDown, Briefcase } from 'lucide-react';
+import { Linkedin, FileText, ChevronDown, Briefcase, Github } from 'lucide-react';
 import { trackClick } from '../lib/analytics';
 
 export default function Hero() {
@@ -34,7 +34,7 @@ export default function Hero() {
               </p>
 
               <div className="pt-4 flex flex-col items-center md:items-start gap-4">
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
                   <a
                     href="https://www.linkedin.com/in/alexbarra"
                     target="_blank"
@@ -44,6 +44,16 @@ export default function Hero() {
                   >
                     <Linkedin className="w-5 h-5" />
                     LinkedIn
+                  </a>
+                  <a
+                    href="https://github.com/alexbarra-hub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackClick('home', 'github_button')}
+                    className="flex items-center gap-2 px-5 py-2.5 text-slate-700 hover:text-slate-900 border border-slate-300 rounded-lg hover:border-slate-900 transition-all"
+                  >
+                    <Github className="w-5 h-5" />
+                    GitHub
                   </a>
                   <a
                     href="https://nebula-lightning-ff3.notion.site/Barra-Ventures-278d423e383080599faae0e32b84dae8"
