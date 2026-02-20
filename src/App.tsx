@@ -24,9 +24,9 @@ function App() {
   }, [currentPage]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Desktop Navigation */}
@@ -34,7 +34,7 @@ function App() {
               <button
                 onClick={() => navigateTo('home')}
                 className={`transition-colors font-medium ${
-                  currentPage === 'home' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                  currentPage === 'home' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
                 Home
@@ -42,7 +42,7 @@ function App() {
               <button
                 onClick={() => navigateTo('projects')}
                 className={`transition-colors font-medium ${
-                  currentPage === 'projects' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                  currentPage === 'projects' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
                 Projects
@@ -53,7 +53,7 @@ function App() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-slate-600 hover:text-slate-900"
+                className="text-neutral-600 hover:text-neutral-900"
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -67,7 +67,7 @@ function App() {
               <button
                 onClick={() => navigateTo('home')}
                 className={`text-left transition-colors font-medium py-2 ${
-                  currentPage === 'home' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                  currentPage === 'home' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
                 Home
@@ -75,7 +75,7 @@ function App() {
               <button
                 onClick={() => navigateTo('projects')}
                 className={`text-left transition-colors font-medium py-2 ${
-                  currentPage === 'projects' ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
+                  currentPage === 'projects' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
                 Projects
@@ -99,9 +99,9 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-300 py-6">
+      <footer className="bg-neutral-900 text-neutral-400 py-8 border-t border-neutral-800">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center text-slate-500 text-sm">
+          <div className="text-center text-neutral-500 text-sm">
             © 2026 Alex Barra. All rights reserved.
           </div>
         </div>

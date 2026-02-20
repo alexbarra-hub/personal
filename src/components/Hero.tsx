@@ -4,33 +4,33 @@ import { trackClick } from '../lib/analytics';
 export default function Hero() {
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 relative">
+    <div className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 relative bg-neutral-50">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           <div className="flex-shrink-0 animate-fade-in">
             <img
               src="/unnamed.jpg"
               alt="Alex"
-              className="w-48 h-48 md:w-64 md:h-64 rounded-2xl object-cover shadow-2xl ring-4 ring-slate-100"
+              className="w-48 h-48 md:w-64 md:h-64 rounded-xl object-cover shadow-lg ring-1 ring-neutral-200"
             />
           </div>
 
           <div className="flex-1 text-center md:text-left">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight">
-                I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-600">Alex</span>.
+              <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 leading-tight">
+                I'm <span className="text-neutral-900">Alex</span>.
               </h1>
-              <p className="text-xl md:text-2xl text-slate-600 font-medium">
+              <p className="text-xl md:text-2xl text-neutral-700 font-medium">
                 I help teams and businesses grow through thoughtful systems and design.
               </p>
             </div>
 
-            <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
+            <div className="space-y-4 text-lg text-neutral-600 leading-relaxed">
               <p>
                 My background spans sales, marketing, customer success, operations, HR, and consulting—from startups to Fortune 50 companies. Currently an MBA candidate at Berkeley Haas School of Business.
               </p>
               <p>
-                Creator of <strong>OFF ALGO</strong>, where I explore attention, behavior, and curiosity beyond algorithms.
+                Creator of <strong className="text-neutral-900">OFF ALGO</strong>, where I explore attention, behavior, and curiosity beyond algorithms.
               </p>
 
               <div className="pt-4 flex flex-col items-center md:items-start gap-4">
@@ -40,7 +40,7 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackClick('home', 'linkedin_button')}
-                    className="flex items-center gap-2 px-5 py-2.5 text-slate-700 hover:text-blue-600 border border-slate-300 rounded-lg hover:border-blue-600 transition-all"
+                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-blue-600 bg-white border border-neutral-300 rounded-lg hover:border-blue-600 transition-all shadow-sm"
                   >
                     <Linkedin className="w-5 h-5" />
                     LinkedIn
@@ -50,7 +50,7 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackClick('home', 'github_button')}
-                    className="flex items-center gap-2 px-5 py-2.5 text-slate-700 hover:text-slate-900 border border-slate-300 rounded-lg hover:border-slate-900 transition-all"
+                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
                   >
                     <Github className="w-5 h-5" />
                     GitHub
@@ -60,7 +60,7 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackClick('home', 'barra_ventures_button')}
-                    className="flex items-center gap-2 px-5 py-2.5 text-slate-700 hover:text-slate-900 border border-slate-300 rounded-lg hover:border-slate-900 transition-all"
+                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
                   >
                     <Briefcase className="w-5 h-5" />
                     Barra Ventures
