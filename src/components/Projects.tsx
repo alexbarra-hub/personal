@@ -14,13 +14,20 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: 'Rally',
+    description: 'A comprehensive dashboard application for tracking and managing team activities, metrics, and collaboration. Built with modern web technologies for seamless performance.',
+    tags: ['Web App', 'Dashboard', 'Analytics'],
+    liveUrl: 'https://rally-rouge.vercel.app/dashboard',
+  },
+  {
+    id: 2,
     title: 'Tully',
     description: 'An AI-powered coaching application that provides personalized guidance and support. Built with modern web technologies to deliver an engaging user experience.',
     tags: ['Web App', 'AI', 'Coaching'],
     liveUrl: 'https://coachtully.lovable.app',
   },
   {
-    id: 2,
+    id: 3,
     title: 'OFF ALGO',
     description: 'A newsletter and content platform exploring ideas beyond the algorithm. Breaking free from digital echo chambers with thoughtful perspectives and authentic conversations.',
     tags: ['Newsletter', 'Content', 'Writing'],
@@ -31,7 +38,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Start Living',
     description: 'An interactive tool designed to help people take action and start living their best lives. Practical steps and inspiration for meaningful change.',
     tags: ['Web App', 'React', 'Personal Development'],
