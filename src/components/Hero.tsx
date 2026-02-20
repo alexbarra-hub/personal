@@ -1,133 +1,77 @@
+import { Linkedin, Briefcase, Github } from 'lucide-react';
 import { trackClick } from '../lib/analytics';
 
-interface Experience {
-  role: string;
-  company: string;
-  period: string;
-  icon: string;
-}
-
-const experiences: Experience[] = [
-  {
-    role: 'MBA Candidate',
-    company: 'Berkeley Haas',
-    period: 'Aug 2024 - Present',
-    icon: '🎓',
-  },
-  {
-    role: 'Creator',
-    company: 'OFF ALGO',
-    period: '2023 - Present',
-    icon: '✍️',
-  },
-  {
-    role: 'Various Roles',
-    company: 'Consulting & Operations',
-    period: '2018 - 2024',
-    icon: '💼',
-  },
-];
-
 export default function Hero() {
+
   return (
-    <div className="min-h-screen px-6 md:px-12 pt-32 pb-20 bg-stone-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-start">
-          {/* Left Column */}
-          <div>
-            <div className="mb-12">
-              <img
-                src="/unnamed.jpg"
-                alt="Alex"
-                className="w-72 h-72 rounded-full object-cover shadow-xl ring-8 ring-white"
-              />
-            </div>
-
-            <h1 className="text-5xl md:text-6xl font-serif font-normal text-neutral-900 mb-6 leading-tight">
-              I'm Alex Barra
-            </h1>
-
-            <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
-              I help teams and businesses grow through thoughtful systems and design, based in California.
-            </p>
+    <div className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 relative bg-neutral-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          <div className="flex-shrink-0 animate-fade-in">
+            <img
+              src="/unnamed.jpg"
+              alt="Alex"
+              className="w-48 h-48 md:w-64 md:h-64 rounded-xl object-cover shadow-lg ring-1 ring-neutral-200"
+            />
           </div>
 
-          {/* Right Column */}
-          <div className="pt-0 md:pt-12">
-            <h2 className="text-4xl md:text-5xl font-serif font-normal text-neutral-900 mb-8 leading-tight">
-              Passionate creating great experiences for Digital Product
-            </h2>
-
-            <div className="flex flex-wrap gap-4 mb-16">
-              <a
-                href="https://www.linkedin.com/in/alexbarra"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackClick('home', 'talk_with_me')}
-                className="px-6 py-3 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all"
-              >
-                Talk with me
-              </a>
-              <a
-                href="#projects"
-                onClick={(e) => {
-                  e.preventDefault();
-                  trackClick('home', 'see_my_work');
-                  document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="px-6 py-3 border border-neutral-300 text-neutral-900 rounded-full hover:bg-neutral-100 transition-all"
-              >
-                See my work
-              </a>
+          <div className="flex-1 text-center md:text-left">
+            <div className="mb-8">
+              <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 leading-tight">
+                I'm <span className="text-neutral-900">Alex</span>.
+              </h1>
+              <p className="text-xl md:text-2xl text-neutral-700 font-medium">
+                I help teams and businesses grow through thoughtful systems and design.
+              </p>
             </div>
 
-            {/* Working Experience */}
-            <div>
-              <h3 className="text-2xl font-serif font-normal text-neutral-900 mb-8">
-                Working experience
-              </h3>
+            <div className="space-y-4 text-lg text-neutral-600 leading-relaxed">
+              <p>
+                My background spans sales, marketing, customer success, operations, HR, and consulting—from startups to Fortune 50 companies. Currently an MBA candidate at Berkeley Haas School of Business.
+              </p>
+              <p>
+                Creator of <strong className="text-neutral-900">OFF ALGO</strong>, where I explore attention, behavior, and curiosity beyond algorithms.
+              </p>
 
-              <div className="space-y-4">
-                {experiences.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-neutral-200 hover:shadow-md transition-shadow"
+              <div className="pt-4 flex flex-col items-center md:items-start gap-4">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                  <a
+                    href="https://www.linkedin.com/in/alexbarra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackClick('home', 'linkedin_button')}
+                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-blue-600 bg-white border border-neutral-300 rounded-lg hover:border-blue-600 transition-all shadow-sm"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center text-2xl">
-                      {exp.icon}
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-sm text-neutral-600 mb-1">{exp.role}</div>
-                      <div className="font-semibold text-neutral-900">{exp.company}</div>
-                    </div>
-                    <div className="text-sm text-neutral-500">{exp.period}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Awards Section */}
-            <div className="mt-16">
-              <h3 className="text-2xl font-serif font-normal text-neutral-900 mb-8">
-                Awards & Recognition
-              </h3>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-neutral-200 hover:shadow-md transition-shadow">
-                  <div className="flex-shrink-0 w-12 h-12 bg-neutral-100 rounded-full flex items-center justify-center">
-                    <span className="font-bold text-neutral-900">W.</span>
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm text-neutral-600 mb-1">Creator Recognition</div>
-                    <div className="font-semibold text-neutral-900">OFF ALGO Featured</div>
-                  </div>
-                  <div className="text-sm text-neutral-500">2024</div>
+                    <Linkedin className="w-5 h-5" />
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://github.com/alexbarra-hub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackClick('home', 'github_button')}
+                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
+                  >
+                    <Github className="w-5 h-5" />
+                    GitHub
+                  </a>
+                  <a
+                    href="https://nebula-lightning-ff3.notion.site/Barra-Ventures-278d423e383080599faae0e32b84dae8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackClick('home', 'barra_ventures_button')}
+                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
+                  >
+                    <Briefcase className="w-5 h-5" />
+                    Barra Ventures
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 }

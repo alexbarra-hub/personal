@@ -24,49 +24,29 @@ function App() {
   }, [currentPage]);
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-stone-50/95 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-5">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200">
+        <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <button
-              onClick={() => navigateTo('home')}
-              className="text-xl font-semibold text-neutral-900 hover:text-neutral-700 transition-colors"
-            >
-              Alex
-            </button>
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <button
                 onClick={() => navigateTo('home')}
-                className={`transition-colors ${
+                className={`transition-colors font-medium ${
                   currentPage === 'home' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
-                About me
+                Home
               </button>
               <button
                 onClick={() => navigateTo('projects')}
-                className={`transition-colors ${
+                className={`transition-colors font-medium ${
                   currentPage === 'projects' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
-                Case studies
+                Projects
               </button>
-            </div>
-
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <a
-                href="https://www.linkedin.com/in/alexbarra"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-2 border border-neutral-300 rounded-full text-neutral-900 hover:bg-neutral-100 transition-all"
-              >
-                See my work
-              </a>
             </div>
 
             <div className="md:hidden">
@@ -86,19 +66,19 @@ function App() {
             <div className="md:hidden pt-4 pb-2 flex flex-col gap-3">
               <button
                 onClick={() => navigateTo('home')}
-                className={`text-left transition-colors py-2 ${
+                className={`text-left transition-colors font-medium py-2 ${
                   currentPage === 'home' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
-                About me
+                Home
               </button>
               <button
                 onClick={() => navigateTo('projects')}
-                className={`text-left transition-colors py-2 ${
+                className={`text-left transition-colors font-medium py-2 ${
                   currentPage === 'projects' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
-                Case studies
+                Projects
               </button>
             </div>
           )}
@@ -119,9 +99,9 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-stone-50 text-neutral-500 py-12 border-t border-neutral-200">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="text-center text-sm">
+      <footer className="bg-neutral-900 text-neutral-400 py-8 border-t border-neutral-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center text-neutral-500 text-sm">
             © 2026 Alex Barra. All rights reserved.
           </div>
         </div>
