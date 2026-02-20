@@ -15,8 +15,8 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'Rally',
-    description: 'A comprehensive dashboard application for tracking and managing team activities, metrics, and collaboration. Built with modern web technologies for seamless performance.',
-    tags: ['Web App', 'Dashboard', 'Analytics'],
+    description: 'A productivity tool designed specifically for ADHD minds. Helps break down tasks, maintain focus, and build momentum with smart features tailored to neurodivergent thinking patterns.',
+    tags: ['Web App', 'ADHD', 'Productivity'],
     liveUrl: 'https://rally-rouge.vercel.app/dashboard',
   },
   {
