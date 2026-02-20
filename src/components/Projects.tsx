@@ -14,7 +14,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Coach Tully',
+    title: 'Tully',
     description: 'An AI-powered coaching application that provides personalized guidance and support. Built with modern web technologies to deliver an engaging user experience.',
     tags: ['Web App', 'AI', 'Coaching'],
     liveUrl: 'https://coachtully.lovable.app',
