@@ -44,6 +44,12 @@ const projects: Project[] = [
     tags: ['Web App', 'React', 'Personal Development'],
     liveUrl: 'https://startlivingnow.bolt.host/',
   },
+  {
+    id: 5,
+    title: 'Buffer',
+    description: 'Your social battery, tracked and understood. An iOS app that learns from your calendar history to predict which events will drain or energize you, surfaces insights about your patterns, and tells you when to protect your time.',
+    tags: ['iOS', 'AI', 'Wellness'],
+  },
 ];
 
 export default function Projects() {
