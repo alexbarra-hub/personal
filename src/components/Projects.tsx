@@ -76,7 +76,7 @@ export default function Projects() {
             Building Cool Things
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl md:mx-0">
-            A collection of projects that combine creativity, problem-solving, and good vibes
+            I build early-stage products that help people think better, live better, and make better decisions. Each project is a live experiment in human-centered AI.
           </p>
         </div>
 
