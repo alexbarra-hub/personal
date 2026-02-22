@@ -20,8 +20,8 @@ export default function Hero() {
               <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 leading-tight">
                 I'm <span className="text-neutral-900">Alex</span>.
               </h1>
-              <p className="text-xl md:text-2xl text-neutral-700 font-medium">
-                I help teams and businesses grow through thoughtful systems and design.
+              <p className="text-xl md:text-2xl text-neutral-700 font-medium mb-6">
+                I build early-stage products that help people think better, live better, and make better decisions. Each project is a live experiment in human-centered AI.
               </p>
             </div>
 
