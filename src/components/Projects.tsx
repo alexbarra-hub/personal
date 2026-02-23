@@ -54,8 +54,8 @@ const projects: Project[] = [
   {
     id: 6,
     title: 'Pattern and Signal',
-    description: 'Exploring the patterns that shape our world and the signals that guide our decisions. A space for thoughtful analysis and meaningful insights.',
-    tags: ['Web App', 'Analytics', 'Insights'],
+    description: 'The complete playbook for building real products with AI — no engineering degree required. Setup to launch, prompting to payments. Everything you need, nothing you don\'t.',
+    tags: ['AI', 'Education', 'Product Building'],
     liveUrl: 'https://patternandsignal.netlify.app',
   },
 ];
