@@ -51,6 +51,13 @@ const projects: Project[] = [
     tags: ['iOS', 'AI', 'Wellness'],
     liveUrl: 'https://bufferme.netlify.app',
   },
+  {
+    id: 6,
+    title: 'Pattern and Signal',
+    description: 'Exploring the patterns that shape our world and the signals that guide our decisions. A space for thoughtful analysis and meaningful insights.',
+    tags: ['Web App', 'Analytics', 'Insights'],
+    liveUrl: 'https://patternandsignal.netlify.app',
+  },
 ];
 
 export default function Projects() {
