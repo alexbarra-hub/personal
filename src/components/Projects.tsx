@@ -73,10 +73,10 @@ export default function Projects() {
             />
           </button>
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
-            Building Cool Things
+            Technology, Built for Humans
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl md:mx-0">
-            I build early-stage products that help people think better, live better, and make better decisions. Each project is a live experiment in human-centered AI.
+            Grounded in behavior, shaped by change, built with modern AI.
           </p>
         </div>
 
