@@ -45,7 +45,7 @@ function App() {
                   currentPage === 'projects' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
-                Studio
+                Portfolio
               </button>
             </div>
 
@@ -78,7 +78,7 @@ function App() {
                   currentPage === 'projects' ? 'text-neutral-900' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
-                Studio
+                Portfolio
               </button>
             </div>
           )}
