@@ -65,7 +65,7 @@ export default function Projects() {
             className="group inline-flex items-center gap-3 px-6 py-3 bg-white hover:bg-neutral-100 border border-neutral-200 rounded-full mb-6 transition-all shadow-sm"
           >
             <Code2 className="w-5 h-5 text-neutral-700" />
-            <span className="text-sm font-medium text-neutral-700">Vibe Coding Projects</span>
+            <span className="text-sm font-medium text-neutral-700">Vibe Coding Studio</span>
             <ChevronDown
               className={`w-5 h-5 text-neutral-700 transition-transform duration-300 ${
                 isExpanded ? 'rotate-180' : ''
