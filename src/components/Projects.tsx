@@ -53,7 +53,7 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: 'Pattern and Signal',
+    title: 'Pattern & Signal',
     description: 'The complete playbook for building real products with AI — no engineering degree required. Setup to launch, prompting to payments. Everything you need, nothing you don\'t.',
     tags: ['AI', 'Education', 'Product Building'],
     liveUrl: 'https://patternandsignal.netlify.app',
