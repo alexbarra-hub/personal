@@ -13,6 +13,26 @@ export default function Hero() {
               alt="Alex"
               className="w-48 h-48 md:w-64 md:h-64 rounded-xl object-cover shadow-lg ring-1 ring-neutral-200"
             />
+            <div className="mt-6 space-y-2">
+              <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide text-center">Experience</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
+                  <img src="/lockheed-martin.png" alt="Lockheed Martin" className="w-full h-full object-contain" />
+                </div>
+                <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
+                  <img src="/haas.png" alt="Berkeley Haas" className="w-full h-full object-contain" />
+                </div>
+                <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
+                  <img src="/drive-ai.png" alt="Drive.ai" className="w-full h-full object-contain" />
+                </div>
+                <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
+                  <img src="/protiviti.png" alt="Protiviti" className="w-full h-full object-contain" />
+                </div>
+                <div className="w-12 h-12 bg-white rounded-lg p-2 flex items-center justify-center shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
+                  <img src="/sephora.png" alt="Sephora" className="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="flex-1 text-center md:text-left">
