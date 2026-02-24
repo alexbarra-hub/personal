@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 relative bg-neutral-50">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          <div className="flex-shrink-0 animate-fade-in">
+          <div className="flex-shrink-0 animate-fade-in -mt-16">
             <img
               src="/unnamed.jpg"
               alt="Alex"
