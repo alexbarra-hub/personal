@@ -33,6 +33,39 @@ export default function Hero() {
                 Creator of <strong className="text-neutral-900">OFF ALGO</strong>, where I explore attention, behavior, and curiosity beyond algorithms.
               </p>
 
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://www.linkedin.com/in/alexbarra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackClick('home', 'linkedin_button')}
+                  className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-blue-600 bg-white border border-neutral-300 rounded-lg hover:border-blue-600 transition-all shadow-sm"
+                >
+                  <Linkedin className="w-5 h-5" />
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/alexbarra-hub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackClick('home', 'github_button')}
+                  className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
+                >
+                  <Github className="w-5 h-5" />
+                  GitHub
+                </a>
+                <a
+                  href="https://nebula-lightning-ff3.notion.site/Barra-Ventures-278d423e383080599faae0e32b84dae8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackClick('home', 'barra_ventures_button')}
+                  className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
+                >
+                  <Briefcase className="w-5 h-5" />
+                  Barra Ventures
+                </a>
+              </div>
+
               <div className="pt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-white border border-neutral-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow">
@@ -117,41 +150,6 @@ export default function Hero() {
                       ))}
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div className="pt-4 flex flex-col items-center md:items-start gap-4">
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
-                  <a
-                    href="https://www.linkedin.com/in/alexbarra"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackClick('home', 'linkedin_button')}
-                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-blue-600 bg-white border border-neutral-300 rounded-lg hover:border-blue-600 transition-all shadow-sm"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://github.com/alexbarra-hub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackClick('home', 'github_button')}
-                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
-                  >
-                    <Github className="w-5 h-5" />
-                    GitHub
-                  </a>
-                  <a
-                    href="https://nebula-lightning-ff3.notion.site/Barra-Ventures-278d423e383080599faae0e32b84dae8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackClick('home', 'barra_ventures_button')}
-                    className="flex items-center gap-2 px-5 py-2.5 text-neutral-700 hover:text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:border-neutral-900 transition-all shadow-sm"
-                  >
-                    <Briefcase className="w-5 h-5" />
-                    Barra Ventures
-                  </a>
                 </div>
               </div>
             </div>
