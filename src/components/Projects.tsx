@@ -15,13 +15,6 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'CURiO',
-    description: 'An AI-powered tool for exploring ideas and building knowledge. Combines modern web technologies with intelligent assistance.',
-    tags: ['Web App', 'AI', 'Knowledge'],
-    tech: ['Next.js', 'TypeScript', 'Prisma', 'Neon (Postgres)', 'OpenAI', 'Vercel'],
-  },
-  {
-    id: 2,
     title: 'Rally',
     description: 'A productivity tool designed specifically for ADHD minds. Helps break down tasks, maintain focus, and build momentum with smart features tailored to neurodivergent thinking patterns.',
     tags: ['Web App', 'ADHD', 'Productivity'],
@@ -29,7 +22,7 @@ const projects: Project[] = [
     liveUrl: 'https://rally-rouge.vercel.app/dashboard',
   },
   {
-    id: 3,
+    id: 2,
     title: 'Buffer',
     description: 'Your social battery, tracked and understood. An iOS app that learns from your calendar history to predict which events will drain or energize you, surfaces insights about your patterns, and tells you when to protect your time.',
     tags: ['iOS', 'AI', 'Wellness'],
@@ -37,7 +30,7 @@ const projects: Project[] = [
     liveUrl: 'https://bufferme.netlify.app',
   },
   {
-    id: 4,
+    id: 3,
     title: 'Pattern & Signal',
     description: 'The complete playbook for building real products with AI — no engineering degree required. Setup to launch, prompting to payments. Everything you need, nothing you don\'t.',
     tags: ['AI', 'Education', 'Product Building'],
@@ -45,7 +38,7 @@ const projects: Project[] = [
     liveUrl: 'https://patternandsignal.netlify.app',
   },
   {
-    id: 5,
+    id: 4,
     title: 'Coach Tully',
     description: 'An AI-powered coaching application that provides personalized guidance and support. Built with modern web technologies to deliver an engaging user experience.',
     tags: ['Web App', 'AI', 'Coaching'],
@@ -53,7 +46,7 @@ const projects: Project[] = [
     liveUrl: 'https://coachtully.lovable.app',
   },
   {
-    id: 6,
+    id: 5,
     title: 'Start Living Now',
     description: 'An interactive tool designed to help people take action and start living their best lives. Practical steps and inspiration for meaningful change.',
     tags: ['Web App', 'Personal Development'],
@@ -61,7 +54,7 @@ const projects: Project[] = [
     liveUrl: 'https://startlivingnow.bolt.host/',
   },
   {
-    id: 7,
+    id: 6,
     title: 'OFF ALGO',
     description: 'A newsletter and content platform exploring ideas beyond the algorithm. Breaking free from digital echo chambers with thoughtful perspectives and authentic conversations.',
     tags: ['Newsletter', 'Content', 'Writing'],
