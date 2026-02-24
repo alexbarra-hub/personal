@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 relative bg-neutral-50">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          <div className="flex-shrink-0 animate-fade-in -mt-16">
+        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
+          <div className="flex-shrink-0 animate-fade-in md:pt-4">
             <img
               src="/unnamed.jpg"
               alt="Alex"
