@@ -33,6 +33,33 @@ export default function Hero() {
                 Creator of <strong className="text-neutral-900">OFF ALGO</strong>, where I explore attention, behavior, and curiosity beyond algorithms.
               </p>
 
+              <div className="pt-6 space-y-4">
+                <div>
+                  <h3 className="text-sm font-semibold text-neutral-900 mb-2 uppercase tracking-wider">Frontend</h3>
+                  <p className="text-base text-neutral-600">
+                    React 18, Next.js, TypeScript, Vite, Tailwind CSS, shadcn/ui, SwiftUI (iOS 17+), Swift Charts, HTML, CSS, JavaScript
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-neutral-900 mb-2 uppercase tracking-wider">Backend</h3>
+                  <p className="text-base text-neutral-600">
+                    Supabase, Neon (Postgres), Prisma, SwiftData, EventKit, OpenAI, Anthropic Claude API
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-neutral-900 mb-2 uppercase tracking-wider">Auth</h3>
+                  <p className="text-base text-neutral-600">
+                    ASWebAuthenticationSession + PKCE (Google OAuth), Supabase Auth
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-neutral-900 mb-2 uppercase tracking-wider">Deployment</h3>
+                  <p className="text-base text-neutral-600">
+                    Vercel, Netlify, Lovable, Bolt, iOS App Store
+                  </p>
+                </div>
+              </div>
+
               <div className="pt-4 flex flex-col items-center md:items-start gap-4">
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
                   <a
