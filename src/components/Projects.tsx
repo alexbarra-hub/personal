@@ -6,6 +6,7 @@ interface Project {
   title: string;
   description: string;
   tags: string[];
+  tech?: string[];
   liveUrl?: string;
   githubUrl?: string;
   additionalLinks?: { url: string; label: string }[];
@@ -14,20 +15,53 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Rally',
-    description: 'A productivity tool designed specifically for ADHD minds. Helps break down tasks, maintain focus, and build momentum with smart features tailored to neurodivergent thinking patterns.',
-    tags: ['Web App', 'ADHD', 'Productivity'],
-    liveUrl: 'https://rally-rouge.vercel.app/dashboard',
+    title: 'CURiO',
+    description: 'An AI-powered tool for exploring ideas and building knowledge. Combines modern web technologies with intelligent assistance.',
+    tags: ['Web App', 'AI', 'Knowledge'],
+    tech: ['Next.js', 'TypeScript', 'Prisma', 'Neon (Postgres)', 'OpenAI', 'Vercel'],
   },
   {
     id: 2,
-    title: 'Tully',
-    description: 'An AI-powered coaching application that provides personalized guidance and support. Built with modern web technologies to deliver an engaging user experience.',
-    tags: ['Web App', 'AI', 'Coaching'],
-    liveUrl: 'https://coachtully.lovable.app',
+    title: 'Rally',
+    description: 'A productivity tool designed specifically for ADHD minds. Helps break down tasks, maintain focus, and build momentum with smart features tailored to neurodivergent thinking patterns.',
+    tags: ['Web App', 'ADHD', 'Productivity'],
+    tech: ['React 18', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Supabase', 'Vercel'],
+    liveUrl: 'https://rally-rouge.vercel.app/dashboard',
   },
   {
     id: 3,
+    title: 'Buffer',
+    description: 'Your social battery, tracked and understood. An iOS app that learns from your calendar history to predict which events will drain or energize you, surfaces insights about your patterns, and tells you when to protect your time.',
+    tags: ['iOS', 'AI', 'Wellness'],
+    tech: ['SwiftUI (iOS 17+)', 'SwiftData', 'EventKit', 'Swift Charts', 'ASWebAuthenticationSession + PKCE', 'Anthropic Claude API'],
+    liveUrl: 'https://bufferme.netlify.app',
+  },
+  {
+    id: 4,
+    title: 'Pattern & Signal',
+    description: 'The complete playbook for building real products with AI — no engineering degree required. Setup to launch, prompting to payments. Everything you need, nothing you don\'t.',
+    tags: ['AI', 'Education', 'Product Building'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Netlify'],
+    liveUrl: 'https://patternandsignal.netlify.app',
+  },
+  {
+    id: 5,
+    title: 'Coach Tully',
+    description: 'An AI-powered coaching application that provides personalized guidance and support. Built with modern web technologies to deliver an engaging user experience.',
+    tags: ['Web App', 'AI', 'Coaching'],
+    tech: ['Lovable (React, Supabase)'],
+    liveUrl: 'https://coachtully.lovable.app',
+  },
+  {
+    id: 6,
+    title: 'Start Living Now',
+    description: 'An interactive tool designed to help people take action and start living their best lives. Practical steps and inspiration for meaningful change.',
+    tags: ['Web App', 'Personal Development'],
+    tech: ['Bolt (React, Supabase)'],
+    liveUrl: 'https://startlivingnow.bolt.host/',
+  },
+  {
+    id: 7,
     title: 'OFF ALGO',
     description: 'A newsletter and content platform exploring ideas beyond the algorithm. Breaking free from digital echo chambers with thoughtful perspectives and authentic conversations.',
     tags: ['Newsletter', 'Content', 'Writing'],
@@ -36,27 +70,6 @@ const projects: Project[] = [
       { url: 'https://offalgo.beehiiv.com', label: 'Beehiiv' },
       { url: 'https://offalgo.com', label: 'Website' },
     ],
-  },
-  {
-    id: 4,
-    title: 'Start Living',
-    description: 'An interactive tool designed to help people take action and start living their best lives. Practical steps and inspiration for meaningful change.',
-    tags: ['Web App', 'React', 'Personal Development'],
-    liveUrl: 'https://startlivingnow.bolt.host/',
-  },
-  {
-    id: 5,
-    title: 'Buffer',
-    description: 'Your social battery, tracked and understood. An iOS app that learns from your calendar history to predict which events will drain or energize you, surfaces insights about your patterns, and tells you when to protect your time.',
-    tags: ['iOS', 'AI', 'Wellness'],
-    liveUrl: 'https://bufferme.netlify.app',
-  },
-  {
-    id: 6,
-    title: 'Pattern & Signal',
-    description: 'The complete playbook for building real products with AI — no engineering degree required. Setup to launch, prompting to payments. Everything you need, nothing you don\'t.',
-    tags: ['AI', 'Education', 'Product Building'],
-    liveUrl: 'https://patternandsignal.netlify.app',
   },
 ];
 
@@ -114,6 +127,24 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+
+              {project.tech && (
+                <div className="mb-6">
+                  <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wide mb-2">
+                    Tech Stack
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 bg-neutral-50 text-neutral-600 text-xs rounded border border-neutral-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="flex flex-wrap items-center gap-4">
                 {project.liveUrl && (
