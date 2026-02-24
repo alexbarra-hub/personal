@@ -7,15 +7,16 @@ export default function Hero() {
     <div className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 relative bg-neutral-50">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          <div className="flex-shrink-0 animate-fade-in">
+            <img
+              src="/unnamed.jpg"
+              alt="Alex"
+              className="w-48 h-48 md:w-64 md:h-64 rounded-xl object-cover shadow-lg ring-1 ring-neutral-200"
+            />
+          </div>
+
           <div className="flex-1 text-center md:text-left">
             <div className="mb-8">
-              <div className="flex-shrink-0 animate-fade-in mb-6 flex justify-center md:justify-start">
-                <img
-                  src="/unnamed.jpg"
-                  alt="Alex"
-                  className="w-48 h-48 md:w-64 md:h-64 rounded-xl object-cover shadow-lg ring-1 ring-neutral-200"
-                />
-              </div>
               <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 leading-tight">
                 I'm <span className="text-neutral-900">Alex</span>.
               </h1>
