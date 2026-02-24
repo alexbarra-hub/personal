@@ -67,18 +67,18 @@ export default function Hero() {
               </div>
 
               <div className="pt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-white border border-neutral-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow">
-                    <h3 className="text-sm font-semibold text-neutral-900 mb-3 uppercase tracking-wider flex items-center gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wider flex items-center gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                       Frontend
                     </h3>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       <div>
                         <span className="text-xs font-medium text-neutral-500 uppercase tracking-wide">Web:</span>
-                        <div className="flex flex-wrap gap-2 mt-1">
+                        <div className="flex flex-wrap gap-2 mt-2">
                           {['React 18', 'Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui'].map(tech => (
-                            <span key={tech} className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100">
+                            <span key={tech} className="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100">
                               {tech}
                             </span>
                           ))}
@@ -86,9 +86,9 @@ export default function Hero() {
                       </div>
                       <div>
                         <span className="text-xs font-medium text-neutral-500 uppercase tracking-wide">iOS:</span>
-                        <div className="flex flex-wrap gap-2 mt-1">
+                        <div className="flex flex-wrap gap-2 mt-2">
                           {['SwiftUI (iOS 17+)', 'Swift Charts'].map(tech => (
-                            <span key={tech} className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100">
+                            <span key={tech} className="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100">
                               {tech}
                             </span>
                           ))}
@@ -97,54 +97,54 @@ export default function Hero() {
                     </div>
                   </div>
 
-                  <div className="bg-white border border-neutral-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow">
-                    <h3 className="text-sm font-semibold text-neutral-900 mb-3 uppercase tracking-wider flex items-center gap-2">
+                  <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wider flex items-center gap-2">
                       <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                       Backend
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {['Supabase (Postgres + Auth)', 'Prisma ORM', 'OpenAI API', 'Anthropic Claude API'].map(tech => (
-                        <span key={tech} className="px-3 py-1 bg-green-50 text-green-700 text-sm rounded-md border border-green-100">
+                        <span key={tech} className="px-3 py-1.5 bg-green-50 text-green-700 text-sm rounded-md border border-green-100">
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="bg-white border border-neutral-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow">
-                    <h3 className="text-sm font-semibold text-neutral-900 mb-3 uppercase tracking-wider flex items-center gap-2">
+                  <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wider flex items-center gap-2">
                       <span className="w-2 h-2 bg-cyan-500 rounded-full"></span>
                       iOS System Integrations
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {['SwiftData', 'EventKit'].map(tech => (
-                        <span key={tech} className="px-3 py-1 bg-cyan-50 text-cyan-700 text-sm rounded-md border border-cyan-100">
+                        <span key={tech} className="px-3 py-1.5 bg-cyan-50 text-cyan-700 text-sm rounded-md border border-cyan-100">
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="bg-white border border-neutral-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow">
-                    <h3 className="text-sm font-semibold text-neutral-900 mb-3 uppercase tracking-wider flex items-center gap-2">
+                  <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wider flex items-center gap-2">
                       <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
                       Authentication
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-amber-50 text-amber-700 text-sm rounded-md border border-amber-100">
+                      <span className="px-3 py-1.5 bg-amber-50 text-amber-700 text-sm rounded-md border border-amber-100">
                         Google OAuth (PKCE) via Supabase Auth
                       </span>
                     </div>
                   </div>
 
-                  <div className="bg-white border border-neutral-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-                    <h3 className="text-sm font-semibold text-neutral-900 mb-3 uppercase tracking-wider flex items-center gap-2">
+                  <div className="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                    <h3 className="text-sm font-semibold text-neutral-900 mb-4 uppercase tracking-wider flex items-center gap-2">
                       <span className="w-2 h-2 bg-rose-500 rounded-full"></span>
                       Deployment
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {['Vercel (Web)', 'Supabase (Backend)', 'iOS App Store / TestFlight'].map(tech => (
-                        <span key={tech} className="px-3 py-1 bg-rose-50 text-rose-700 text-sm rounded-md border border-rose-100">
+                        <span key={tech} className="px-3 py-1.5 bg-rose-50 text-rose-700 text-sm rounded-md border border-rose-100">
                           {tech}
                         </span>
                       ))}
