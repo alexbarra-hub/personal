@@ -85,11 +85,11 @@ export default function Projects({ setCurrentPage }: ProjectsProps) {
         00-02-A
       </div>
 
-      <h2 className="huge-type distorted mb-8">
+      <h2 className="huge-type distorted mb-16">
         PROJECTS
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
         {projects.map((project) => (
           <div
             key={project.id}
