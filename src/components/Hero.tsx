@@ -14,13 +14,13 @@ export default function Hero({ setCurrentPage }: HeroProps) {
         animation: 'rotate 60s linear infinite'
       }}></div>
 
-      <div className="sticky-meta text-mono absolute top-6 left-6 z-20 flex gap-6">
+      <div className="text-mono absolute top-8 left-1/2 -translate-x-1/2 z-20 flex gap-12">
         <button
           onClick={() => {
             trackClick('home', 'about_nav');
             setCurrentPage('about');
           }}
-          className="hover:underline transition-all"
+          className="text-4xl font-black hover:underline transition-all"
         >
           ABOUT
         </button>
@@ -29,7 +29,7 @@ export default function Hero({ setCurrentPage }: HeroProps) {
             trackClick('home', 'projects_nav');
             setCurrentPage('projects');
           }}
-          className="hover:underline transition-all"
+          className="text-4xl font-black hover:underline transition-all"
         >
           PROJECTS
         </button>
