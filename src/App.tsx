@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
+import About from './components/About';
 import { trackPageView } from './lib/analytics';
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
 
         <div style={{ scrollSnapAlign: 'start' }}>
           <Hero />
+        </div>
+        <div style={{ scrollSnapAlign: 'start' }}>
+          <About />
         </div>
         <div style={{ scrollSnapAlign: 'start' }}>
           <Projects />
