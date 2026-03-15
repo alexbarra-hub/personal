@@ -9,7 +9,7 @@ interface AboutProps {
 
 export default function About({ setCurrentPage }: AboutProps) {
   return (
-    <section className="w-full min-h-screen relative flex flex-col p-8 md:p-16 pb-24 border-b-[4px] border-[var(--c-red)]" style={{ backgroundColor: 'var(--c-pink)', color: 'var(--c-red)' }}>
+    <section className="w-full h-screen relative flex flex-col p-8 md:p-16 pb-24 border-b-[4px] border-[var(--c-red)] overflow-y-auto" style={{ backgroundColor: 'var(--c-pink)', color: 'var(--c-red)' }}>
       <button
         onClick={() => {
           trackClick('about', 'back_to_home');
