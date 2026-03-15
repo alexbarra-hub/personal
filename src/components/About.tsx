@@ -53,10 +53,10 @@ export default function About({ setCurrentPage }: AboutProps) {
                 WHO I AM
               </h3>
             </div>
-            <p className="text-mono text-lg leading-relaxed mb-4" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+            <p className="text-mono text-xl leading-relaxed mb-4" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
               I'm a strategic advisor and consultant specializing in organizational effectiveness, change management, and early-stage venture building. Currently pursuing my MBA at UC Berkeley (Expected 2028), I help organizations transform while building sustainable startups.
             </p>
-            <p className="text-mono text-lg leading-relaxed" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+            <p className="text-mono text-xl leading-relaxed" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
               With expertise spanning organizational design, change management, and product strategy, I bridge the gap between business transformation and hands-on execution.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function About({ setCurrentPage }: AboutProps) {
                 WHAT I DO
               </h3>
             </div>
-            <ul className="text-mono text-base space-y-3 list-none relative z-10" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+            <ul className="text-mono text-lg space-y-3 list-none relative z-10" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
               <li className="flex items-start gap-2">
                 <span style={{ color: 'var(--c-teal)' }}>→</span>
                 <span>Organizational effectiveness & change management</span>
@@ -110,14 +110,14 @@ export default function About({ setCurrentPage }: AboutProps) {
             <div className="space-y-4 relative z-10">
               <div>
                 <p className="text-mono font-black text-lg mb-1" style={{ color: 'var(--c-white)' }}>UC Berkeley, Haas</p>
-                <p className="text-mono text-base" style={{ color: 'var(--c-teal)', fontWeight: '500' }}>MBA Candidate, Expected 2028</p>
+                <p className="text-mono text-lg" style={{ color: 'var(--c-teal)', fontWeight: '500' }}>MBA Candidate, Expected 2028</p>
               </div>
               <div>
                 <p className="text-mono font-black text-lg mb-1" style={{ color: 'var(--c-white)' }}>Cornell University</p>
-                <p className="text-mono text-base" style={{ color: 'var(--c-teal)', fontWeight: '500' }}>BS Industrial & Labor Relations, 2013</p>
+                <p className="text-mono text-lg" style={{ color: 'var(--c-teal)', fontWeight: '500' }}>BS Industrial & Labor Relations, 2013</p>
               </div>
               <div className="pt-2 border-t-2" style={{ borderColor: 'var(--c-red)' }}>
-                <p className="text-mono text-sm" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+                <p className="text-mono text-base" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
                   Prosci Change Management • Enterprise Design Thinking • Culture Design • Lean Change Agent
                 </p>
               </div>
@@ -139,11 +139,11 @@ export default function About({ setCurrentPage }: AboutProps) {
               <div className="flex items-start gap-4 mb-3">
                 <div className="flex-1">
                   <p className="text-mono font-black text-lg mb-1" style={{ color: 'var(--c-red)' }}>DELTA DENTAL OF CALIFORNIA</p>
-                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-white)' }}>Senior Organizational Effectiveness Consultant (Tech & Quality)</p>
-                  <p className="text-mono text-xs" style={{ color: 'var(--c-teal)' }}>Feb 2024 - Present</p>
+                  <p className="text-mono text-base mb-1" style={{ color: 'var(--c-white)' }}>Senior Organizational Effectiveness Consultant (Tech & Quality)</p>
+                  <p className="text-mono text-sm" style={{ color: 'var(--c-teal)' }}>Feb 2024 - Present</p>
                 </div>
               </div>
-              <ul className="text-mono text-sm space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+              <ul className="text-mono text-base space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
                 <li className="flex items-start gap-2">
                   <span style={{ color: 'var(--c-teal)' }}>•</span>
                   <span>Business partner to SVP & VP clients in Technology & Quality organizations</span>
@@ -168,11 +168,11 @@ export default function About({ setCurrentPage }: AboutProps) {
               <div className="flex items-start gap-4 mb-3">
                 <div className="flex-1">
                   <p className="text-mono font-black text-lg mb-1" style={{ color: 'var(--c-red)' }}>BARRA CONSULTING</p>
-                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-white)' }}>Founder & Principal Consultant</p>
-                  <p className="text-mono text-xs" style={{ color: 'var(--c-teal)' }}>Feb 2024 - Present</p>
+                  <p className="text-mono text-base mb-1" style={{ color: 'var(--c-white)' }}>Founder & Principal Consultant</p>
+                  <p className="text-mono text-sm" style={{ color: 'var(--c-teal)' }}>Feb 2024 - Present</p>
                 </div>
               </div>
-              <ul className="text-mono text-sm space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+              <ul className="text-mono text-base space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
                 <li className="flex items-start gap-2">
                   <span style={{ color: 'var(--c-teal)' }}>•</span>
                   <span>Strategic advisor for early-stage startups and non-profits</span>
@@ -197,11 +197,11 @@ export default function About({ setCurrentPage }: AboutProps) {
               <div className="flex items-start gap-4 mb-3">
                 <div className="flex-1">
                   <p className="text-mono font-black text-lg mb-1" style={{ color: 'var(--c-red)' }}>PROPELLER CONSULTING</p>
-                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-white)' }}>Management Consultant</p>
-                  <p className="text-mono text-xs" style={{ color: 'var(--c-teal)' }}>Oct 2021 - Feb 2024</p>
+                  <p className="text-mono text-base mb-1" style={{ color: 'var(--c-white)' }}>Management Consultant</p>
+                  <p className="text-mono text-sm" style={{ color: 'var(--c-teal)' }}>Oct 2021 - Feb 2024</p>
                 </div>
               </div>
-              <ul className="text-mono text-sm space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+              <ul className="text-mono text-base space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
                 <li className="flex items-start gap-2">
                   <span style={{ color: 'var(--c-teal)' }}>•</span>
                   <span>Built and launched new change management capability for Operational Excellence Office</span>
@@ -226,11 +226,11 @@ export default function About({ setCurrentPage }: AboutProps) {
               <div className="flex items-start gap-4 mb-3">
                 <div className="flex-1">
                   <p className="text-mono font-black text-lg mb-1" style={{ color: 'var(--c-red)' }}>LOCKHEED MARTIN</p>
-                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-white)' }}>HR Transformation Program Manager & Talent Development Consultant</p>
-                  <p className="text-mono text-xs" style={{ color: 'var(--c-teal)' }}>Oct 2016 - Oct 2021</p>
+                  <p className="text-mono text-base mb-1" style={{ color: 'var(--c-white)' }}>HR Transformation Program Manager & Talent Development Consultant</p>
+                  <p className="text-mono text-sm" style={{ color: 'var(--c-teal)' }}>Oct 2016 - Oct 2021</p>
                 </div>
               </div>
-              <ul className="text-mono text-sm space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+              <ul className="text-mono text-base space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
                 <li className="flex items-start gap-2">
                   <span style={{ color: 'var(--c-teal)' }}>•</span>
                   <span>Led Space HR iLab transformation program supporting 200+ HR professionals</span>
@@ -255,11 +255,11 @@ export default function About({ setCurrentPage }: AboutProps) {
               <div className="flex items-start gap-4 mb-3">
                 <div className="flex-1">
                   <p className="text-mono font-black text-lg mb-1" style={{ color: 'var(--c-red)' }}>SIKORSKY AIRCRAFT</p>
-                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-white)' }}>HR Business Partner & Industrial Relations</p>
-                  <p className="text-mono text-xs" style={{ color: 'var(--c-teal)' }}>Jul 2013 - Oct 2016</p>
+                  <p className="text-mono text-base mb-1" style={{ color: 'var(--c-white)' }}>HR Business Partner & Industrial Relations</p>
+                  <p className="text-mono text-sm" style={{ color: 'var(--c-teal)' }}>Jul 2013 - Oct 2016</p>
                 </div>
               </div>
-              <ul className="text-mono text-sm space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+              <ul className="text-mono text-base space-y-2 list-none mt-3" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
                 <li className="flex items-start gap-2">
                   <span style={{ color: 'var(--c-teal)' }}>•</span>
                   <span>Led HR strategy for 150+ Operations employees across three organizations</span>
@@ -289,7 +289,7 @@ export default function About({ setCurrentPage }: AboutProps) {
             <h3 className="text-mono text-3xl font-black mb-6 text-center" style={{ color: 'var(--c-red)' }}>
               LET'S CONNECT
             </h3>
-            <p className="text-mono text-lg leading-relaxed mb-8 text-center max-w-2xl mx-auto" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
+            <p className="text-mono text-xl leading-relaxed mb-8 text-center max-w-2xl mx-auto" style={{ color: 'var(--c-white)', fontWeight: '500' }}>
               Interested in working together on organizational transformation or early-stage ventures? I'd love to connect.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
