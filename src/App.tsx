@@ -16,12 +16,14 @@ function App() {
         borderRight: '4px solid var(--c-red)',
         color: 'var(--c-red)'
       }}>
-        <div className="whitespace-nowrap text-3xl" style={{
+        <div className="flex flex-col whitespace-nowrap text-6xl" style={{
           fontFamily: 'var(--f-display)',
+          animation: 'marquee-vertical 15s linear infinite',
           writingMode: 'vertical-rl',
           transform: 'rotate(180deg)'
         }}>
-          <span>ALEX BARRA — PORTFOLIO — 2026</span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
         </div>
       </div>
 
