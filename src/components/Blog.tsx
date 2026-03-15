@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { PenLine, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { supabase, BlogPost } from '../lib/supabase';
 import BlogPostDetail from './BlogPostDetail';
 
@@ -29,82 +28,52 @@ export default function Blog() {
     }
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
   if (selectedPost) {
     return <BlogPostDetail post={selectedPost} onBack={() => setSelectedPost(null)} />;
   }
 
   return (
-    <div className="min-h-screen py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full mb-6">
-            <PenLine className="w-5 h-5 text-slate-600" />
-            <span className="text-sm font-medium text-slate-600">Thoughts & Learnings</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Insights & Perspectives
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Sharing thoughts on growth, strategy, and organizational excellence
-          </p>
-        </div>
-
-        {loading ? (
-          <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900"></div>
-          </div>
-        ) : posts.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-slate-600 text-lg">No posts yet. Check back soon!</p>
-          </div>
-        ) : (
-          <div className="space-y-8">
-            {posts.map((post) => (
-              <article
-                key={post.id}
-                className="bg-white rounded-xl p-8 border border-slate-200 hover:border-slate-300 transition-all hover:shadow-lg cursor-pointer group"
-                onClick={() => setSelectedPost(post)}
-              >
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div>
-                    <div className="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium mb-3">
-                      {post.category}
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors">
-                      {post.title}
-                    </h3>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-slate-600 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
-                </div>
-
-                <p className="text-slate-600 mb-4 leading-relaxed">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center gap-6 text-sm text-slate-500">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{formatDate(post.created_at)}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>{post.read_time}</span>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
+    <section className="w-full h-screen relative flex flex-col p-8 md:p-16 border-b-[4px] border-[var(--c-red)] overflow-y-auto" style={{ backgroundColor: 'var(--c-white)', color: 'var(--c-black)' }}>
+      <div className="absolute top-6 right-6 text-mono text-right z-20">
+        THOUGHTS<br />
+        ARCHIVE
       </div>
-    </div>
+
+      <h2 className="huge-type mb-8" style={{ letterSpacing: '-0.05em' }}>
+        BLOG
+      </h2>
+
+      {loading ? (
+        <div className="text-mono text-center py-12">LOADING...</div>
+      ) : posts.length === 0 ? (
+        <div className="text-mono text-center py-12">NO POSTS YET. CHECK BACK SOON.</div>
+      ) : (
+        <div className="grid grid-cols-1 gap-4 relative z-10">
+          {posts.map((post) => (
+            <div
+              key={post.id}
+              className="border-2 border-[var(--c-black)] p-6 hover:bg-[var(--c-black)] hover:text-[var(--c-white)] transition-all cursor-pointer group"
+              onClick={() => setSelectedPost(post)}
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-mono text-xs mb-2 opacity-70">{post.category}</p>
+                  <h3 className="text-mono text-xl font-black mb-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-mono text-sm mb-3 opacity-80">
+                    {post.excerpt}
+                  </p>
+                  <p className="text-mono text-xs opacity-60">{post.read_time}</p>
+                </div>
+                <div className="text-mono text-2xl font-black">→</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="absolute bottom-6 right-6 text-mono font-black z-20">END_SESSION</div>
+    </section>
   );
 }
