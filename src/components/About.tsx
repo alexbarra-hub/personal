@@ -1,6 +1,27 @@
-export default function About() {
+import { trackClick } from '../lib/analytics';
+import { ArrowLeft } from 'lucide-react';
+
+type Page = 'home' | 'about' | 'projects';
+
+interface AboutProps {
+  setCurrentPage: (page: Page) => void;
+}
+
+export default function About({ setCurrentPage }: AboutProps) {
   return (
     <section className="w-full min-h-screen relative flex flex-col p-8 md:p-16 border-b-[4px] border-[var(--c-red)] overflow-y-auto" style={{ backgroundColor: 'var(--c-teal)', color: 'var(--c-black)' }}>
+      <button
+        onClick={() => {
+          trackClick('about', 'back_to_home');
+          setCurrentPage('home');
+        }}
+        className="absolute top-6 left-6 text-mono z-20 flex items-center gap-2 hover:underline transition-all"
+        style={{ color: 'var(--c-red)' }}
+      >
+        <ArrowLeft size={20} />
+        BACK TO HOME
+      </button>
+
       <div className="absolute top-6 right-6 text-mono text-right z-20" style={{ color: 'var(--c-red)' }}>
         ABOUT<br />
         00-03-A

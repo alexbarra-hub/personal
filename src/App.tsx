@@ -1,13 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import About from './components/About';
 import { trackPageView } from './lib/analytics';
 
+type Page = 'home' | 'about' | 'projects';
+
 function App() {
+  const [currentPage, setCurrentPage] = useState<Page>('home');
+
   useEffect(() => {
-    trackPageView('home');
-  }, []);
+    trackPageView(currentPage);
+  }, [currentPage]);
 
   return (
     <div className="w-full h-screen overflow-hidden" style={{ backgroundColor: 'var(--c-black)' }}>
@@ -28,22 +32,15 @@ function App() {
       </div>
 
       <main className="ml-16 h-screen overflow-y-scroll" style={{
-        scrollSnapType: 'y mandatory',
         scrollbarWidth: 'none'
       }}>
         <style>{`
           main::-webkit-scrollbar { display: none; }
         `}</style>
 
-        <div style={{ scrollSnapAlign: 'start' }}>
-          <Hero />
-        </div>
-        <div style={{ scrollSnapAlign: 'start' }}>
-          <About />
-        </div>
-        <div style={{ scrollSnapAlign: 'start' }}>
-          <Projects />
-        </div>
+        {currentPage === 'home' && <Hero setCurrentPage={setCurrentPage} />}
+        {currentPage === 'about' && <About setCurrentPage={setCurrentPage} />}
+        {currentPage === 'projects' && <Projects setCurrentPage={setCurrentPage} />}
       </main>
     </div>
   );

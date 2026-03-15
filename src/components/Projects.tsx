@@ -1,4 +1,11 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ArrowLeft } from 'lucide-react';
+import { trackClick } from '../lib/analytics';
+
+type Page = 'home' | 'about' | 'projects';
+
+interface ProjectsProps {
+  setCurrentPage: (page: Page) => void;
+}
 
 interface Project {
   id: number;
@@ -51,9 +58,21 @@ const projects: Project[] = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({ setCurrentPage }: ProjectsProps) {
   return (
     <section className="w-full h-screen relative flex flex-col p-8 md:p-16 border-b-[4px] border-[var(--c-red)] overflow-y-auto" style={{ backgroundColor: 'var(--c-black)', color: 'var(--c-red)' }}>
+      <button
+        onClick={() => {
+          trackClick('projects', 'back_to_home');
+          setCurrentPage('home');
+        }}
+        className="absolute top-6 left-6 text-mono z-20 flex items-center gap-2 hover:underline transition-all"
+        style={{ color: 'var(--c-teal)' }}
+      >
+        <ArrowLeft size={20} />
+        BACK TO HOME
+      </button>
+
       <div className="absolute top-6 right-6 text-mono text-right z-20" style={{ color: 'var(--c-teal)' }}>
         PORTFOLIO<br />
         00-02-A
