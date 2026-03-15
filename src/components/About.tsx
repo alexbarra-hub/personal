@@ -10,7 +10,7 @@ export default function About() {
         ABOUT
       </h2>
 
-      <div className="max-w-6xl space-y-8 relative z-10 mb-16">
+      <div className="max-w-6xl mx-auto space-y-8 relative z-10 mb-16">
         <div className="border-2 border-[var(--c-black)] p-8 bg-[var(--c-pink)] grid md:grid-cols-[300px,1fr] gap-8 items-start">
           <div className="relative">
             <div className="border-4 border-[var(--c-red)] overflow-hidden">
