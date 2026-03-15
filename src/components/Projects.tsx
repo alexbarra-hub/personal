@@ -11,6 +11,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
+  techStack?: string[];
   liveUrl?: string;
   additionalLinks?: { url: string; label: string }[];
 }
@@ -20,36 +21,42 @@ const projects: Project[] = [
     id: 1,
     title: 'Rally',
     description: 'Productivity tool designed for ADHD minds. Break down tasks, maintain focus, build momentum.',
+    techStack: ['React', 'TypeScript', 'Supabase', 'Tailwind'],
     liveUrl: 'https://rally-rouge.vercel.app/dashboard',
   },
   {
     id: 2,
     title: 'Buffer',
     description: 'Your social battery, tracked. iOS app that predicts which events drain or energize you.',
+    techStack: ['React', 'TypeScript', 'OpenAI', 'Tailwind'],
     liveUrl: 'https://bufferme.netlify.app',
   },
   {
     id: 3,
     title: 'Pattern & Signal',
     description: 'Complete playbook for building products with AI. Setup to launch, prompting to payments.',
+    techStack: ['React', 'TypeScript', 'Supabase', 'Tailwind'],
     liveUrl: 'https://patternandsignal.netlify.app',
   },
   {
     id: 4,
     title: 'Coach Tully',
     description: 'AI-powered coaching application. Personalized guidance and support.',
+    techStack: ['React', 'TypeScript', 'AI', 'Tailwind'],
     liveUrl: 'https://coachtully.lovable.app',
   },
   {
     id: 5,
     title: 'Start Living Now',
     description: 'Interactive tool to help people take action. Practical steps for meaningful change.',
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind'],
     liveUrl: 'https://startlivingnow.bolt.host/',
   },
   {
     id: 6,
     title: 'OFF ALGO',
     description: 'Newsletter exploring ideas beyond the algorithm. Breaking free from digital echo chambers.',
+    techStack: ['Substack', 'Beehiiv', 'Web'],
     additionalLinks: [
       { url: 'https://offa1go.substack.com', label: 'Substack' },
       { url: 'https://offalgo.beehiiv.com', label: 'Beehiiv' },
@@ -82,28 +89,44 @@ export default function Projects({ setCurrentPage }: ProjectsProps) {
         PROJECTS
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="border-2 border-[var(--c-red)] p-6 hover:bg-[var(--c-red)] hover:text-[var(--c-black)] transition-all group"
+            className="border-4 border-[var(--c-red)] p-10 hover:bg-[var(--c-red)] hover:text-[var(--c-black)] transition-all group"
           >
-            <h3 className="text-mono text-2xl font-black mb-3">
+            <h3 className="text-mono text-4xl font-black mb-4">
               {project.title}
             </h3>
-            <p className="text-mono text-sm mb-6 opacity-80">
+            <p className="text-mono text-lg mb-6 opacity-80 leading-relaxed">
               {project.description}
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            {project.techStack && (
+              <div className="mb-6">
+                <p className="text-mono text-sm font-black mb-2 opacity-60">TECH STACK</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-mono text-xs px-3 py-1 border-2 border-current"
+                    >
+                      {tech.toUpperCase()}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="flex flex-wrap gap-4">
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-mono text-xs flex items-center gap-2 border-b-2 border-current pb-1"
+                  className="text-mono text-sm flex items-center gap-2 border-b-2 border-current pb-1 font-black"
                 >
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-4 h-4" />
                   LIVE
                 </a>
               )}
@@ -113,9 +136,9 @@ export default function Projects({ setCurrentPage }: ProjectsProps) {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-mono text-xs flex items-center gap-2 border-b-2 border-current pb-1"
+                  className="text-mono text-sm flex items-center gap-2 border-b-2 border-current pb-1 font-black"
                 >
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-4 h-4" />
                   {link.label.toUpperCase()}
                 </a>
               ))}
