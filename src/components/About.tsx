@@ -10,17 +10,29 @@ export default function About() {
         ABOUT
       </h2>
 
-      <div className="max-w-4xl space-y-8 relative z-10 mb-16">
-        <div className="border-2 border-[var(--c-black)] p-8 bg-[var(--c-pink)]">
-          <h3 className="text-mono text-3xl font-black mb-4" style={{ color: 'var(--c-red)' }}>
-            WHO I AM
-          </h3>
-          <p className="text-mono text-lg leading-relaxed mb-4" style={{ color: 'var(--c-red)' }}>
-            I'm a strategic advisor and consultant specializing in organizational effectiveness, change management, and early-stage venture building. Currently pursuing my MBA at UC Berkeley (Expected 2028), I help organizations transform while building sustainable startups.
-          </p>
-          <p className="text-mono text-lg leading-relaxed" style={{ color: 'var(--c-red)' }}>
-            With expertise spanning organizational design, change management, and product strategy, I bridge the gap between business transformation and hands-on execution.
-          </p>
+      <div className="max-w-6xl space-y-8 relative z-10 mb-16">
+        <div className="border-2 border-[var(--c-black)] p-8 bg-[var(--c-pink)] grid md:grid-cols-[300px,1fr] gap-8 items-start">
+          <div className="relative">
+            <div className="border-4 border-[var(--c-red)] overflow-hidden">
+              <img
+                src="/alexbarra.jpg"
+                alt="Alex Barra"
+                className="w-full h-auto block"
+                style={{ filter: 'contrast(1.1) saturate(1.1)' }}
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="text-mono text-3xl font-black mb-4" style={{ color: 'var(--c-red)' }}>
+              WHO I AM
+            </h3>
+            <p className="text-mono text-lg leading-relaxed mb-4" style={{ color: 'var(--c-red)' }}>
+              I'm a strategic advisor and consultant specializing in organizational effectiveness, change management, and early-stage venture building. Currently pursuing my MBA at UC Berkeley (Expected 2028), I help organizations transform while building sustainable startups.
+            </p>
+            <p className="text-mono text-lg leading-relaxed" style={{ color: 'var(--c-red)' }}>
+              With expertise spanning organizational design, change management, and product strategy, I bridge the gap between business transformation and hands-on execution.
+            </p>
+          </div>
         </div>
 
         <div className="border-2 border-[var(--c-black)] p-8 bg-[var(--c-pink)]">
