@@ -60,8 +60,7 @@ export default function Projects() {
       </div>
 
       <h2 className="huge-type distorted mb-8">
-        PROJ<br />
-        ECTS
+        PROJECTS
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
