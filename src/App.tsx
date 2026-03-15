@@ -22,10 +22,18 @@ function App() {
       }}>
         <div className="flex flex-col whitespace-nowrap text-6xl" style={{
           fontFamily: 'var(--f-display)',
-          animation: 'marquee-vertical 12s linear infinite',
+          animation: 'marquee-vertical 20s linear infinite',
           writingMode: 'vertical-rl',
           transform: 'rotate(180deg)'
         }}>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
           <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
           <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
           <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
