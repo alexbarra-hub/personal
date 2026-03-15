@@ -9,7 +9,7 @@ interface HeroProps {
 export default function Hero({ setCurrentPage }: HeroProps) {
   return (
     <section className="w-full h-screen relative flex flex-col p-8 md:p-16 border-b-[4px] border-[var(--c-red)] overflow-hidden" style={{ backgroundColor: 'var(--c-pink)', color: 'var(--c-red)' }}>
-      <div className="absolute top-1/2 left-1/2 w-[150%] aspect-square opacity-30 z-0 -translate-x-1/2 -translate-y-1/2" style={{
+      <div className="absolute top-1/2 left-1/2 w-[200%] md:w-[150%] aspect-square opacity-30 z-0 -translate-x-1/2 -translate-y-1/2" style={{
         background: 'repeating-conic-gradient(var(--c-teal) 0deg 4deg, transparent 4deg 8deg)',
         animation: 'rotate 60s linear infinite'
       }}></div>
