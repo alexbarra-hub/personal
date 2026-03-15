@@ -9,7 +9,7 @@ interface AboutProps {
 
 export default function About({ setCurrentPage }: AboutProps) {
   return (
-    <section className="w-full min-h-screen relative flex flex-col p-8 md:p-16 border-b-[4px] border-[var(--c-red)] overflow-y-auto" style={{ backgroundColor: 'var(--c-pink)', color: 'var(--c-red)' }}>
+    <section className="w-full min-h-screen relative flex flex-col p-8 md:p-16 pb-24 border-b-[4px] border-[var(--c-red)]" style={{ backgroundColor: 'var(--c-pink)', color: 'var(--c-red)' }}>
       <div className="absolute top-1/2 left-1/2 w-[120%] aspect-square opacity-10 z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" style={{
         background: 'repeating-conic-gradient(var(--c-teal) 0deg 3deg, transparent 3deg 6deg)',
         animation: 'rotate 90s linear infinite reverse'
