@@ -22,8 +22,8 @@ function App() {
           writingMode: 'vertical-rl',
           transform: 'rotate(180deg)'
         }}>
-          <span>ALEX BARRA — PORTFOLIO — 2026 — ALEX BARRA — PORTFOLIO — 2026 — </span>
-          <span>ALEX BARRA — PORTFOLIO — 2026 — ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
+          <span>ALEX BARRA — PORTFOLIO — 2026 — </span>
         </div>
       </div>
 
