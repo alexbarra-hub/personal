@@ -14,13 +14,13 @@ export default function Hero({ setCurrentPage }: HeroProps) {
         animation: 'rotate 60s linear infinite'
       }}></div>
 
-      <div className="text-mono absolute top-8 left-1/2 -translate-x-1/2 z-20 flex gap-6 md:gap-12">
+      <div className="text-mono absolute top-20 md:top-8 left-8 md:left-1/2 md:-translate-x-1/2 z-20 flex gap-4 md:gap-12">
         <button
           onClick={() => {
             trackClick('home', 'about_nav');
             setCurrentPage('about');
           }}
-          className="text-2xl md:text-4xl font-black hover:underline transition-all"
+          className="text-xl md:text-4xl font-black hover:underline transition-all"
         >
           ABOUT
         </button>
@@ -29,13 +29,13 @@ export default function Hero({ setCurrentPage }: HeroProps) {
             trackClick('home', 'projects_nav');
             setCurrentPage('projects');
           }}
-          className="text-2xl md:text-4xl font-black hover:underline transition-all"
+          className="text-xl md:text-4xl font-black hover:underline transition-all"
         >
           PROJECTS
         </button>
       </div>
 
-      <div className="sticky-meta text-mono absolute top-6 right-6 text-right z-20 text-sm md:text-base">
+      <div className="sticky-meta text-mono absolute top-6 right-6 text-right z-20 text-xs md:text-base">
         VOL. 01<br />
         [ALEX_BARRA]
       </div>
