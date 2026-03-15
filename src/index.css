@@ -60,8 +60,8 @@
   }
 
   @keyframes marquee-vertical {
-    0% { transform: translateY(0%) rotate(180deg); }
-    100% { transform: translateY(-100%) rotate(180deg); }
+    0% { transform: translateY(100%) rotate(180deg); }
+    100% { transform: translateY(0%) rotate(180deg); }
   }
 
   @keyframes rotate {
