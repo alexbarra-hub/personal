@@ -44,45 +44,85 @@ export default function About() {
             EXPERIENCE
           </h3>
 
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="flex-1">
-                <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>DELTA DENTAL OF CALIFORNIA</p>
-                <p className="text-mono text-sm mb-2" style={{ color: 'var(--c-red)' }}>Senior Organizational Effectiveness Consultant</p>
-                <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Feb 2024 - Present</p>
+          <div className="space-y-8">
+            <div>
+              <div className="flex items-start gap-4 mb-3">
+                <div className="flex-1">
+                  <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>DELTA DENTAL OF CALIFORNIA</p>
+                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-red)' }}>Senior Organizational Effectiveness Consultant (Tech & Quality)</p>
+                  <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Feb 2024 - Present</p>
+                </div>
               </div>
+              <ul className="text-mono text-xs space-y-1 list-none ml-2" style={{ color: 'var(--c-red)' }}>
+                <li>→ Business partner to SVP & VP clients in Technology & Quality organizations</li>
+                <li>→ Facilitated organizational design and operating model discussions with senior leadership</li>
+                <li>→ Delivered change management for enterprise tech transformations (Oracle Redwood, Atlassian Cloud Migration)</li>
+                <li>→ Created PowerBI dashboards for workforce planning insights</li>
+              </ul>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="flex-1">
-                <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>BARRA CONSULTING</p>
-                <p className="text-mono text-sm mb-2" style={{ color: 'var(--c-red)' }}>Founder & Principal Consultant</p>
-                <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Feb 2024 - Present</p>
+            <div>
+              <div className="flex items-start gap-4 mb-3">
+                <div className="flex-1">
+                  <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>BARRA CONSULTING</p>
+                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-red)' }}>Founder & Principal Consultant</p>
+                  <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Feb 2024 - Present</p>
+                </div>
               </div>
+              <ul className="text-mono text-xs space-y-1 list-none ml-2" style={{ color: 'var(--c-red)' }}>
+                <li>→ Strategic advisor for early-stage startups and non-profits</li>
+                <li>→ Conducted customer discovery and go-to-market strategies for pre-seed startups (Beauty, EdTech, HRTech)</li>
+                <li>→ Facilitated strategic planning workshops and created executable roadmaps</li>
+                <li>→ Designed custom business tools including grant tracking, brand frameworks, and investor materials</li>
+              </ul>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="flex-1">
-                <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>PROPELLER CONSULTING</p>
-                <p className="text-mono text-sm mb-2" style={{ color: 'var(--c-red)' }}>Management Consultant</p>
-                <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Oct 2021 - Feb 2024</p>
+            <div>
+              <div className="flex items-start gap-4 mb-3">
+                <div className="flex-1">
+                  <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>PROPELLER CONSULTING</p>
+                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-red)' }}>Management Consultant</p>
+                  <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Oct 2021 - Feb 2024</p>
+                </div>
               </div>
+              <ul className="text-mono text-xs space-y-1 list-none ml-2" style={{ color: 'var(--c-red)' }}>
+                <li>→ Built and launched new change management capability for Operational Excellence Office</li>
+                <li>→ Supported multi-phased Change Management strategies for 5 major projects</li>
+                <li>→ Facilitated workshops with 30+ Marketing, eCommerce and Tech employees</li>
+                <li>→ Led team of 2 change management professionals</li>
+              </ul>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="flex-1">
-                <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>LOCKHEED MARTIN</p>
-                <p className="text-mono text-sm mb-2" style={{ color: 'var(--c-red)' }}>HR Transformation Program Manager</p>
-                <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Oct 2016 - Oct 2021</p>
+            <div>
+              <div className="flex items-start gap-4 mb-3">
+                <div className="flex-1">
+                  <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>LOCKHEED MARTIN</p>
+                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-red)' }}>HR Transformation Program Manager & Talent Development Consultant</p>
+                  <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Oct 2016 - Oct 2021</p>
+                </div>
               </div>
+              <ul className="text-mono text-xs space-y-1 list-none ml-2" style={{ color: 'var(--c-red)' }}>
+                <li>→ Led Space HR iLab transformation program supporting 200+ HR professionals</li>
+                <li>→ Created learning & development strategy aligned to future state HR vision</li>
+                <li>→ Co-created Agile-Change Management approach and trained 100+ professionals</li>
+                <li>→ Facilitated talent reviews and organizational design workshops for 500+ Engineering & Technology employees</li>
+              </ul>
             </div>
 
-            <div className="flex items-start gap-4">
-              <div className="flex-1">
-                <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>SIKORSKY AIRCRAFT</p>
-                <p className="text-mono text-sm mb-2" style={{ color: 'var(--c-red)' }}>HR Business Partner</p>
-                <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Jul 2013 - Oct 2016</p>
+            <div>
+              <div className="flex items-start gap-4 mb-3">
+                <div className="flex-1">
+                  <p className="text-mono font-black text-xl mb-1" style={{ color: 'var(--c-red)' }}>SIKORSKY AIRCRAFT</p>
+                  <p className="text-mono text-sm mb-1" style={{ color: 'var(--c-red)' }}>HR Business Partner & Industrial Relations</p>
+                  <p className="text-mono text-sm opacity-75" style={{ color: 'var(--c-red)' }}>Jul 2013 - Oct 2016</p>
+                </div>
               </div>
+              <ul className="text-mono text-xs space-y-1 list-none ml-2" style={{ color: 'var(--c-red)' }}>
+                <li>→ Led HR strategy for 150+ Operations employees across three organizations</li>
+                <li>→ Partnered with Lockheed Martin HR for Sikorsky integration efforts</li>
+                <li>→ Served as sole HR representative for 250+ employees at Shelton O&R facility</li>
+                <li>→ Managed relationships with 1000+ bargaining unit workforce and Union officials</li>
+              </ul>
             </div>
           </div>
         </div>
