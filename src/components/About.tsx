@@ -177,12 +177,6 @@ export default function About() {
               LINKEDIN
             </a>
             <a
-              href="mailto:alex.h.barra@gmail.com"
-              className="text-mono px-6 py-3 border-2 border-[var(--c-red)] bg-[var(--c-red)] text-[var(--c-pink)] hover:bg-transparent hover:text-[var(--c-red)] transition-all"
-            >
-              EMAIL
-            </a>
-            <a
               href="https://github.com/alexbarra-hub"
               target="_blank"
               rel="noopener noreferrer"
