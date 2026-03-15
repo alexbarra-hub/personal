@@ -85,7 +85,7 @@ export default function Projects({ setCurrentPage }: ProjectsProps) {
         00-02-A
       </div>
 
-      <h2 className="huge-type distorted mb-16">
+      <h2 className="huge-type distorted mb-16 mt-16 md:mt-0">
         PROJECTS
       </h2>
 
