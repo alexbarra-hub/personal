@@ -75,23 +75,23 @@ export default function About({ setCurrentPage }: AboutProps) {
             </div>
             <ul className="text-mono text-xl space-y-4 list-none relative z-10" style={{ color: 'var(--c-white)', fontWeight: '500', letterSpacing: '0.02em', lineHeight: '1.6' }}>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
+                <span className="flex-shrink-0 mt-1" style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
                 <span>Organizational effectiveness & change management</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
+                <span className="flex-shrink-0 mt-1" style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
                 <span>Strategic planning & operating model design</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
+                <span className="flex-shrink-0 mt-1" style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
                 <span>Early-stage venture advisory & market validation</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
+                <span className="flex-shrink-0 mt-1" style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
                 <span>Workshop facilitation & stakeholder management</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
+                <span className="flex-shrink-0 mt-1" style={{ color: 'var(--c-teal)', fontSize: '1.5rem' }}>→</span>
                 <span>Data-driven decision making & analytics</span>
               </li>
             </ul>
